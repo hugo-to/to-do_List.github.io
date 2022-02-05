@@ -1,0 +1,146 @@
+/* Incluir el relleno y el borde en el ancho y alto total de un elemento */
+
+* {
+    box-sizing: border-box;  
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+} 
+
+
+/* Eliminar márgenes y relleno de la lista */
+ul {
+    
+    padding: 0;
+    margin: 0;
+}
+
+
+/* Aplica estilo a los elementos de la lista */
+
+ul li {
+    cursor: pointer;  /* Hace que el cursor sea una flecha */ 
+    position: relative; /*Para que se pueda mover el elemento */
+    padding: 12px 8px 12px 40px; /* Le da espacio a los elementos de la lista */
+    background: #24ff91; /* Color de fondo */
+    font-size: 20px; /* Tamaño de la fuente */
+    font-weight: 500; /* Negrita */
+    color: rgb(253, 0, 139);
+    transition: 0.4s; /* Tiempo de transición */
+
+    /* hacer que los elementos de la lista no se puedan seleccionar */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    /* font-family: 'Courier New', Courier, monospace; */
+}
+
+/* Establecer todos los elementos impares de la lista en un color diferente (rayas de cebra) */
+
+ul li:nth-child(odd) {   /* Para que se aplique a los elementos impares */
+    background: rgba(108, 248, 178, 0.513);
+}
+
+/* Color de fondo más oscuro al pasar el mouse */
+
+ul li:hover {
+    background: rgb(63, 148, 108);
+}
+
+
+/* Al hacer clic, agrega un color de fondo y tacha el texto */
+
+
+ul li.checked {       /* .checked es el nombre de la clase */
+    background: rgb(55, 77, 53);
+    color: rgb(255, 255, 255);
+    text-decoration: line-through;
+}
+/* Agrega una marca de "marcado" cuando se hace clic en */
+
+ul li.checked::before {
+    content: '';  /* Establece el contenido de la marca */
+    position: absolute;  /* Para que se pueda mover el elemento */
+    border-color: rgb(255, 255, 255);  
+    border-style: solid;
+    border-width: 0 2px 2px 0;;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);  /* Rotar el elemento */
+    /* transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); */
+    height: 12px;
+    width: 10px;
+}
+
+/* Dale estilo al botón de cerrar */
+.close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    /* margin: 0px 0px 0px 0px; */
+    padding: 11px 12px 12px 14px;
+    background-color: #fafafabd;
+    color: #4fd487;
+    border-top-left-radius: 8px; ;
+    border-bottom-left-radius: 8px; ;
+    /* border-radius: 10%; */
+}
+
+/* .close:hover {
+    background-color: #f04c4c;
+
+} */
+
+
+
+
+
+
+/* Estilo del encabezado */
+.header {
+    background-color: #307068;
+    padding: 30px 40px;
+    color: white;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Limpia los flotantes después del encabezado */
+.header:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Da estilo a la entrada */
+input {
+    margin: 0;
+    border: none;
+    border-top-left-radius: 8px; ;
+    border-bottom-left-radius: 8px; ;
+    width: 75%;
+    padding: 10px;
+    float: left;    
+    font-size: 16px;
+    /* font-family: 'Courier New', Courier, monospace; */
+}
+
+
+/* Aplica estilo al botón "Agregar" */
+.addBtn {
+    padding: 10px;
+    width: 25%;
+    background: #00a56e;
+    color: rgb(255, 255, 255);
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-top-right-radius: 8px; ;
+    border-bottom-right-radius: 8px; ;
+}
+
+
+.addBtn:hover {
+    background-color: rgb(0, 199, 90);
+}
